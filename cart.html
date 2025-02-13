@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chamber of Commerce Website for the Town of Idona" />
+    <meta name="author" content="Chioma Nwosu" />
+    <meta property="og:title" content="Home | Chamber of Commerce, Idona" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="favicon.ico" />
+    <meta property="og:url" content="https://totonzinto.github.io/wdd230/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, But Recommended -->
+    <meta
+      property="og:description"
+      content="Home | Chamber of Commerce, Idona" />
+    <meta
+      property="og:site_name"
+      content="Chioma Nwosu wdd2230 chamber of Commerce" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <title>Home | Chamber of Commerce, Idona</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/WGIA-SVG.svg" width="72" height="16" alt="logo"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./auth/login.html">Log in</a></li>
+          <li><a href="./auth/signup.html">Sign up</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Your Shopping Cart</h1>
+
+      <!-- Cart Items -->
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="item1.jpg" alt="Product 1" class="cart-item-image" />
+          <div class="cart-item-info">
+            <h3>Organic Fertilizer - 10kg</h3>
+            <p>Price: $25.00</p>
+            <div class="quantity-selector">
+              <label for="quantity1">Quantity: </label>
+              <input type="number" id="quantity1" value="2" min="1" max="10" />
+            </div>
+          </div>
+          <div class="cart-item-price">
+            <p>$50.00</p>
+          </div>
+          <button class="remove-item">Remove</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="item2.jpg" alt="Product 2" class="cart-item-image" />
+          <div class="cart-item-info">
+            <h3>High Yield Corn Seeds - 500g</h3>
+            <p>Price: $15.00</p>
+            <div class="quantity-selector">
+              <label for="quantity2">Quantity: </label>
+              <input type="number" id="quantity2" value="3" min="1" max="10" />
+            </div>
+          </div>
+          <div class="cart-item-price">
+            <p>$45.00</p>
+          </div>
+          <button class="remove-item">Remove</button>
+        </div>
+
+        <!-- Add more items here -->
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+        <div class="summary-item">
+          <p>Subtotal:</p>
+          <p>$95.00</p>
+        </div>
+        <div class="summary-item">
+          <p>Shipping:</p>
+          <p>Free</p>
+        </div>
+        <div class="summary-item">
+          <p>Total:</p>
+          <p>$95.00</p>
+        </div>
+        <a href="checkout.html">
+          <button class="checkout-button">Proceed to Checkout</button>
+        </a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo and About Section -->
+        <div class="footer-section">
+          <img
+            src="logo.png"
+            alt="Agriculture E-commerce Logo"
+            class="footer-logo" />
+          <p class="about">
+            Your trusted source for farming tools, seeds, equipment, and more.
+            We offer a wide range of products to help your farm thrive.
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Support -->
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Track Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact and Social Media -->
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: support@agri-ecommerce.com</p>
+          <p>Phone: +1 800 123 4567</p>
+          <div class="social-media">
+            <a href="#" class="social-icon"
+              ><img src="facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="twitter-icon.png" alt="Twitter"
+            /></a>
+            <a href="#" class="social-icon"
+              ><img src="instagram-icon.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="footer-legal">
+        <p>&copy; 2025 Agriculture E-commerce. All Rights Reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
