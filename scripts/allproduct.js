@@ -67,8 +67,9 @@ function getId(button) {
 function all_product() {
   let div = ``;
   let count = 0;
-  agriculturalProducts.forEach((value, i) => {
-    div += `<div class="featured-product-card">
+  while (count < 3) {
+    agriculturalProducts.forEach((value, i) => {
+      div += `<div class="featured-product-card">
                 <img
                   src="${value.image}"
                   alt="${value.name}" />
@@ -76,8 +77,9 @@ function all_product() {
                 <p>${value.description}</p>
                 <button class="btn-view" id="${i}" onclick="getId(this)">View Product</button>
               </div>`;
-  });
-
+    });
+    count++;
+  }
   allproduct.innerHTML = div;
 }
 all_product();

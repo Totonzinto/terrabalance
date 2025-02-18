@@ -1,4 +1,3 @@
-const cart = [];
 const agriculturalProducts = [
   {
     name: "High-Tech Tractors",
@@ -55,31 +54,56 @@ const agriculturalProducts = [
     },
   },
 ];
-const allproduct = document.getElementById("all_product");
 
-function getId(button) {
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const product = document.getElementById("product-detail-container");
+
+function addToCart(button) {
   let buttonId = button.id;
-  console.log("buttonId: ", buttonId);
-  localStorage.setItem("productView", buttonId);
-  window.location.href = "/product_view.html";
+  // Check if item already exists in the cart
+  let existingItem = cart.find((item) => item.item.name === buttonId);
+
+  if (existingItem) {
+    existingItem.quantity += 1; // Increment quantity
+  } else {
+    let item = agriculturalProducts.find((item) => (item.name = buttonId));
+    cart.push({
+      item: item,
+      quantity: 1,
+    });
+  }
+  console.log(cart);
+  localStorage.setItem("cart", JSON.stringify(cart)); // Save to localStorage
+  alert("item added to cart");
+  window.location.href = "/cart.html";
 }
 
-function all_product() {
-  let div = ``;
-  let count = 0;
-  agriculturalProducts.forEach((value, i) => {
-    div += `<div class="featured-product-card">
-                <img
-                  src="${value.image}"
-                  alt="${value.name}" />
-                <h3>${value.name}</h3>
-                <p>${value.description}</p>
-                <button class="btn-view" id="${i}" onclick="getId(this)">View Product</button>
-              </div>`;
-  });
-
-  allproduct.innerHTML = div;
+function view() {
+  localStorage.getItem("productView");
+  item = agriculturalProducts[localStorage.getItem("productView")];
+  console.log(item);
+  product.innerHTML = `<div class="product-image">
+            <img
+              src="${item.image}"
+              alt="${item.name}" />
+          </div>
+          <div class="product-info">
+            <h2 class="product-title">${item.name}</h2>
+            <p class="product-description">
+            ${item.description}
+            </p>
+            <div class="product-specifications">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>${item.specifications.engineCapacity}</li>
+                <li>Fuel Type: ${item.specifications.fuelType}</li>
+                <li>Transmission: ${item.specifications.transmission}</li>
+                <li>Price: ${item.specifications.price}</li>
+                <li>Warranty: ${item.specifications.warranty}</li>
+              </ul>
+            </div>
+            <button class="btn-add-to-cart" id="${item.name}" onclick="addToCart(this)">Add to Cart</button>
+          </div>`;
 }
-all_product();
 
-let viewProduct = 0;
+view();

@@ -3,73 +3,76 @@
  
 } */
 @media only screen and (min-width: 35rem) {
-    #hero a {
-      padding: 1% 3rem;
-      border-radius: 50px;
-    }
-  
-    #hero h1 {
-      font-size: 2.5rem;
-    }
-    /*----------- FOOTER --------------*/
-    #contact {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    #contact > div {
-      max-width: 60%;
-    }
-  
-    #contact > div > div {
-      display: flex;
-    }
-  
-    #contact > div > div > div {
-      margin-right: 30px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-    }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .login {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 90vh;
-    }
-  
-    .category-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .featured-products-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .product-detail-container {
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    .product-image img {
-      max-width: 90%;
-    }
-  
-    .product-info {
-      max-width: 90%;
-      text-align: center;
-    }
-  
-    .btn-add-to-cart {
-      width: 100%;
-    }
+  #hero a {
+    padding: 1% 3rem;
+    border-radius: 50px;
   }
-  
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  /*----------- FOOTER --------------*/
+  #contact {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #contact > div {
+    max-width: 60%;
+  }
+
+  #contact > div > div {
+    display: flex;
+  }
+
+  #contact > div > div > div {
+    margin-right: 30px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+  }
+
+  .category-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail-container {
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-image img {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .product-info {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .btn-add-to-cart {
+    width: 100%;
+  }
+}
