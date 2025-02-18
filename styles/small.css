@@ -677,3 +677,6 @@ button.checkout-button:hover {
   font-weight: bold;
   margin-top: 10px;
 }
+.cart-main {
+  margin-top: 15%;
+}

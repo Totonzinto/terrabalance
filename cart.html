@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"content="Chamber of Commerce Website for the Town of Idona" />
+    <meta
+      name="description"
+      content="Chamber of Commerce Website for the Town of Idona" />
     <meta name="author" content="Chioma Nwosu" />
     <meta property="og:title" content="Home | Chamber of Commerce, Idona" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="favicon.ico" />
-    <meta property="og:url" content="https://totonzinto.github.io/terrabalance/" />
+    <meta
+      property="og:url"
+      content="https://totonzinto.github.io/terrabalance/" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!--  Non-Essential, But Recommended -->
-    <meta property="og:description"content="Home | Chamber of Commerce, Idona" />
-    <meta property="og:site_name"content="Chioma Nwosu chamber of Commerce" />
+    <meta
+      property="og:description"
+      content="Home | Chamber of Commerce, Idona" />
+    <meta property="og:site_name" content="Chioma Nwosu chamber of Commerce" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/terra.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet" />
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
@@ -46,11 +54,11 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="cart-main">
       <h1>Your Shopping Cart</h1>
 
       <!-- Cart Items -->
-      <div class="cart-items">
+      <div class="cart-items" id="cart-items">
         <div class="cart-item">
           <img src="item1.jpg" alt="Product 1" class="cart-item-image" />
           <div class="cart-item-info">
@@ -87,7 +95,7 @@
       </div>
 
       <!-- Cart Summary -->
-      <div class="cart-summary">
+      <div class="cart-summary" id="cart-summary">
         <div class="summary-item">
           <p>Subtotal:</p>
           <p>$95.00</p>
@@ -109,7 +117,9 @@
       <div class="footer-container">
         <!-- Logo and About Section -->
         <div class="footer-section">
-          <img src="images/agric.jpeg"alt="Agriculture E-commerce Logo"
+          <img
+            src="images/agric.jpeg"
+            alt="Agriculture E-commerce Logo"
             class="footer-logo" />
           <p class="about">
             Your trusted source for farming tools, seeds, equipment, and more.
@@ -170,5 +180,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/cart.js"></script>
   </body>
 </html>
